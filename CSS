@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+}
+img{
+  width: 165px;
+}
+body{
+  background-color: rgb(198, 198, 198);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.container{
+  width: 335px;
+  height: 550px;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 30px 30px rgba(0,0,0, 0.1),  0px 20px 20px rgba(0,0,0, 0.1);
+  transform-style: preserve-3d;
+}
+.back{
+  /* transform-style: preserve-3d; */
+  transition: all 0.5s ease;
+  padding: 0px 20px;
+}
+
+.ballBlock{
+  padding: 45px 0px;
+  display: flex;
+  justify-content: center;
+}
+.ball{
+  background-image: linear-gradient(90deg, rgb(214, 112, 74), rgb(33, 105, 200));
+  width: 135px;
+  height: 135px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+width: 230px;
+}
+.text p{
+  font-weight: 300;
+  font-size: 14px;
+  padding-top: 20px;
+  line-height: 20px;
+  color: rgb(113, 113, 113)
+}
+.text h1{
+  font-size: 29px;
+}
+.sneaker img{
+  transition: all 0.5s ease;
+}
+.buttons{
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button{
+  border-radius: 30px;
+  padding: 2px 20px;
+  color: rgb(101, 101, 101);
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor:pointer;
+}
+.buttons button:hover{
+  background-color: rgb(115, 115, 115);
+  color: white;
+}
+
+.mainBtn{
+  display:flex;
+  justify-content: center;
+  padding: 36px 0px;
+}
+.mainBtn button{
+  background: rgb(187, 70, 33);
+  width: 85%;
+  padding: 5px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mainBtn button:hover{
+  background-color: rgb(171, 64, 31);
+  width: 91%;
+  letter-spacing: 4px;
+}
