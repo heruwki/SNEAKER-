@@ -1,0 +1,37 @@
+let container = document.querySelector('.container');
+let back = document.querySelector('.back1');
+//for transform translateZ
+let sneaker = document.querySelector('.sneaker');
+let title = document.querySelector('.text');
+let buttons = document.querySelector('.buttons');
+let mainBtn = document.querySelector('.mainBtn');
+//MOUSEMOVE IN CONTAINER
+back.addEventListener('mousemove', moveBlock);
+function moveBlock(event){
+let y = window.innerHeight / 2 - event.pageY;
+let x = window.innerWidth / 2 - event.pageX;
+container.style.transform = `rotateX(${(y / 11)}deg) rotateY(${(x / 11)}deg)`;
+}
+
+//MOUSEENTER
+back.addEventListener('mouseenter', inBlock)
+function inBlock(event){
+container.style.transition = 'none';
+//TRANSFORM
+sneaker.style.transform = 'translateZ(60px) rotate(-35deg)';
+title.style.transform = 'translateZ(20px)';
+buttons.style.transform = 'translateZ(20px)';
+mainBtn.style.transform = 'translateZ(20px)';
+}
+//MOUSELEAVE
+back.addEventListener('mouseleave', outBlock)
+
+function outBlock(event){
+  container.style.transition = 'all 0.3s ease';
+  //BACK TO BASIC POSITION
+  container.style.transform = `rotateY(${0}deg) rotateX(${0}deg)`;
+  sneaker.style.transform = 'translateZ(0px) rotate(0deg)';
+  title.style.transform = 'translateZ(0px)';
+  buttons.style.transform = 'translateZ(0px)';
+  mainBtn.style.transform = 'translateZ(0px)';
+}
